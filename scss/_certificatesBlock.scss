@@ -1,0 +1,157 @@
+body {
+	background-image: url(../img/header-back.png);
+}
+.certificatesBlock{
+	font-family: "Cambria";
+	background-image: url(../img/header-back-layer.png);
+  	background-color: rgba(0,0,0,0.1);
+  	width: 100%;
+	@include flex(center,center);
+	.wrapper{
+		.certificates {
+			@include flex(center,center);
+			width: 100%;
+			flex-direction: column;
+			.servicesHeader{
+				.sectionSubtitle {
+					font-weight: normal;
+				    font-style: italic;
+				    font-size: 18px;
+					span {
+						font-size: 18px;
+						color: $firstColor;
+					}
+				} // sectionSubtitle
+				.sectionTitle {
+				} // sectionTitle
+			} // servicesHeader
+			.certificatesContent {
+				width: 100%;
+				@include flex(center,center);
+				padding: 50px;
+				&__images {
+					width: 100%;
+					padding: 15px;
+					@include flex(center,center);
+					.image {
+						margin: 2%;
+						@include flex(center,center);
+						img {
+						  width: 100%;
+						  display: block;
+						  height: auto;	
+						} // img
+					} // image
+				} // __images
+			} // certificatesContent
+		} // certificates
+	} // wrapper
+	@media screen and ( max-width: 900px ){
+		.wrapper{
+			.certificates {
+				@include flex(center,center);
+				flex-direction: column;
+				.servicesHeader{
+					.sectionSubtitle {
+
+					} // sectionSubtitle
+					.sectionTitle {
+
+					} // sectionTitle
+				} // servicesHeader
+				.certificatesContent {
+					@include flex(center,center);
+					padding: 0px;
+					&__images {
+						height: auto;
+						padding: 15px;
+						@include flex(center,center);
+						flex-wrap: wrap;
+						.image {
+							height: auto;
+							width: 40%;
+							margin: 2%;
+							@include flex(center,center);
+						} // image
+					} // __images
+				} // certificatesContent
+			} // certificates
+		} // wrapper	
+	}
+	@media screen and ( max-width: 650px ){
+		.wrapper{
+			.certificates {
+				@include flex(center,center);
+				flex-direction: column;
+				.servicesHeader{
+					padding: 20px 0 30px;
+					.sectionSubtitle {
+						font-size: 12px;
+						span {
+							font-size: 12px;
+						}
+					} // sectionSubtitle
+					.sectionTitle {
+						font-size: 30px;
+					} // sectionTitle
+				} // servicesHeader
+			} // certificates
+		} // wrapper	
+	} // 650
+	@media screen and ( max-width: 450px ){
+		.wrapper{
+			.certificates {
+				@include flex(center,center);
+				flex-direction: column;
+				.servicesHeader{
+					.sectionSubtitle {
+						text-align: center;
+						font-size: 12px;
+						span {
+							font-size: 12px;
+						}
+					} // sectionSubtitle
+					.sectionTitle {
+						font-size: 30px;
+					} // sectionTitle
+				} // servicesHeader
+			} // certificates
+		} // wrapper	
+	} // 450
+
+	@media screen and ( max-width: 400px ){
+		.wrapper{
+			.certificates {
+				@include flex(center,center);
+				flex-direction: column;
+				.servicesHeader{
+					padding: 20px 0 0;
+					.sectionSubtitle {
+					} // sectionSubtitle
+					.sectionTitle {
+						font-size: 26px;
+					} // sectionTitle
+				} // servicesHeader
+				.certificatesContent {
+					@include flex(center,center);
+					padding: 15px;
+					&__images {
+						height: auto;
+						padding: 15px;
+						@include flex(center,center);
+						flex-wrap: wrap;
+						.image {
+							height: auto;
+							width: 30%;
+							margin: 2%;
+							@include flex(center,center);
+						} // image
+					} // __images
+				} // certificatesContent
+			} // certificates
+		} // wrapper	
+	} // 400
+
+		
+	
+} // certificatesBlock

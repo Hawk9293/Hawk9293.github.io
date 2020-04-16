@@ -1,0 +1,213 @@
+input, button {
+    border:none;
+    background-image:none;
+    background-color:transparent;
+    box-shadow: none;
+}
+.contactUsBlock {
+	position: relative;
+	.success {
+		font-family: "Cambria";
+		width: auto;
+		padding: 30px;
+		height: auto;
+		background: $secondColor;
+		color: #D9F1D9;
+		margin: 0 auto;
+		position: absolute;
+		z-index: 1;
+		top: 50%;
+		left: 50%;
+		transform: translate( -50%, -50%);
+	    display: flex; 
+		justify-content: center;
+		align-items: center;
+		font-size: 25px;
+		border-radius: 10px;
+	} // success
+	.successClose {
+		border-radius: 0 10px 0 10px;
+		 display: flex; 
+		 justify-content: center;
+		 align-items: center;
+		 position: absolute;
+		 top: 0;
+		 right: 0;
+		 font-size: 25px;
+		 cursor: pointer;
+		 color: #D9F1D9;
+		 background: $secondColor;
+		 border: 2px solid #D9F1D9;
+	} // successClose
+	background: $firstColor;
+	font-family: "Cambria";
+	.wrapper {
+		.contactUs {
+			@include flex(center,center);
+			flex-direction: column;
+			.servicesHeader{
+				.sectionSubtitle {
+					font-weight: normal;
+					font-style: italic;
+					font-size: 18px;
+					span {
+						font-size: 18px;
+						color: $secondColor;
+					}
+				} // sectionSubtitle
+				.sectionTitle {
+					span {
+						color: $secondColor;
+					}
+				} // sectionTitle
+			} // servicesHeader
+			.userForm {
+				padding: 0 0 40px;
+				@include flex(center,center);
+				width: 100%;
+				&__label {
+					@include flex(center,center);
+					width: 20%;
+					margin: 10px;
+				} // __label
+				&__input {
+					@include flex(center,center);
+					border-radius: 5px;
+					border: 2px solid white;
+					padding: 5px;
+					width: 100%;
+					font-size: 18px;
+					color: white;
+					font-family: 'Open Sans', sans-serif;
+					&-error{
+  						border: 2px solid #9C1313;
+					}
+					&::placeholder {
+						color: white;
+						font-family: 'Open Sans', sans-serif;
+					} // ::placeholder
+				} // __input
+				&__submitBtn {
+					padding: 5px;
+					font-size: 18px;
+					width: 100%;
+					white-space: nowrap;
+					background: white;
+				} // __submitBtn
+			} // userForm
+		} // contactUs
+	} // wrapper
+	@media screen and(max-width: 1000px) {
+		.wrapper {
+			.contactUs {
+				@include flex(center,center);
+				flex-direction: column;
+				.servicesHeader{
+					.sectionSubtitle {
+						font-weight: normal;
+						font-style: italic;
+						font-size: 18px;
+						span {
+							font-size: 18px;
+							color: $secondColor;
+						}
+					} // sectionSubtitle
+					.sectionTitle {
+						span {
+							color: $secondColor;
+						}
+					} // sectionTitle
+				} // servicesHeader
+				.userForm {
+					padding: 0 0 40px;
+					@include flex(center,center);
+					width: 100%;
+					flex-wrap: wrap;
+					&__label {
+						@include flex(center,center);
+						border: 2px solid white;
+						margin: 10px;
+						width: 20%;
+					} // __label
+					&__input {
+						@include flex(center,center);
+						font-size: 18px;
+						margin: 5px;
+						width: 100%;
+						color: white;
+						font-family: 'Open Sans', sans-serif;
+						&::placeholder {
+							color: white;
+							font-family: 'Open Sans', sans-serif;
+						} // ::placeholder
+					} // __input
+					&__submitBtn {
+						padding: 5px;
+						font-size: 18px;
+						width: 100%;
+						white-space: nowrap;
+						background: white;
+					} // __submitBtn
+				} // userForm
+			} // contactUs
+		} // wrapper
+	} // 1000
+	@media screen and(max-width: 700px) {
+		.wrapper {
+			.contactUs {
+				@include flex(center,center);
+				flex-direction: column;
+				.servicesHeader{
+					padding: 40px 0 10px;
+					.sectionSubtitle {
+						font-weight: normal;
+						font-style: italic;
+						font-size: 14px;
+						text-align: center;
+						span {
+							font-size: 14px;
+							color: $secondColor;
+						}
+					} // sectionSubtitle
+					.sectionTitle {
+							font-size: 30px;
+						span {
+							color: $secondColor;
+						}
+					} // sectionTitle
+				} // servicesHeader
+				.userForm {
+					padding: 0 0 40px;
+					@include flex(center,center);
+					width: 100%;
+					flex-wrap: wrap;
+					&__label {
+						@include flex(center,center);
+						border: 2px solid white;
+						margin: 10px;
+						width: 45%;
+					} // __label
+					&__input {
+						@include flex(center,center);
+						font-size: 18px;
+						margin: 5px;
+						width: 100%;
+						color: white;
+						font-family: 'Open Sans', sans-serif;
+						&::placeholder {
+							color: white;
+							font-family: 'Open Sans', sans-serif;
+						} // ::placeholder
+					} // __input
+					&__submitBtn {
+						padding: 5px;
+						font-size: 18px;
+						width: 100%;
+						white-space: nowrap;
+						background: white;
+					} // __submitBtn
+				} // userForm
+			} // contactUs
+		} // wrapper
+	} // 700
+} // contactUsBlock

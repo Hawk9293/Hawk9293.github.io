@@ -1,0 +1,45 @@
+body {
+	
+} // body
+.topServices {
+	font-family: "Cambria";
+	@include flex(center,center);
+	flex-direction: column;
+	width: 100%;
+	height: auto;
+	margin: 100px 0 100px 0;
+	&__header {
+		h2 {
+			font-size: 30px;
+			padding: 40px 0;
+		} // h2
+	} // __header
+	&__items {
+		@include flex(space-around,center);
+		background: rgba(255, 255, 255, 0.05); 
+		border-radius: 50px;
+		width: 100%;
+		padding: 0 50px;
+		.topItem {
+			@include flex(center,center);
+			flex-direction: column;
+			&__img {
+				margin: 20px 0;
+				overflow: hidden;
+				height: 170px;
+				width: 170px;
+				background: black;
+				border-radius: 50%; 
+				img {
+					height: 100%;
+					width: auto;		
+				} // img
+			} // __img
+			h3 {
+				font-size: 12px;
+				padding: 0 0 20px 0;
+			} // h3
+		} // .topItem
+	} // __items
+} // .topServices
+
